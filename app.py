@@ -11,7 +11,7 @@ from resources.item import Item, ItemList
 from resources.store import Store, StoreList
 
 app = Flask(__name__)
-database_url = os.environ.get('DATABASE_URL', 'sqlite:///data.db').replace("postgres://", "posgresql://")
+database_url = os.environ.get('DATABASE_URL', 'sqlite:///data.db').replace("postgres://", "postgresql://")
 app.config['SQLALCHEMY_DATABASE_URI'] = database_url
 app.config['JWT_SECRET_KEY'] = 'no-escribirla-aquí' # esto es solo un ejemplo
 app.config['PROPAGATE_EXCEPTIONS'] = True
